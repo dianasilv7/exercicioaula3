@@ -43,3 +43,18 @@
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ====== Contactos ====== */
+#contactos {
+  scroll-margin-top: 5rem;
+}
+
+#contactos form input,
+#contactos form textarea {
+  transition: border-color 0.3s ease;
+}
+
+#contactos form input:focus,
+#contactos form textarea:focus {
+  border-color: #111;
+}
