@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox:target {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+      .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        text-decoration: none;
+      }
+      .lightbox .close:before {
+        content: "×";
+      }
+    </style>
   </head>
   <body class="bg-gray-100 text-gray-900 font-sans">
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header class="text-center py-8">
       <h1 class="text-4xl font-bold mb-2">Portfolio Fotográfico</h1>
       <p class="text-gray-600">Galeria</p>
@@ -17,149 +49,183 @@
     <!-- Galeria -->
     <main class="max-w-6xl mx-auto p-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- 12 imagens -->
         <a
           href="#img1"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/paisagem.jpeg"
-            alt="Imagem 1"
-            class="w-full h-full object-cover"
+            alt="Natureza"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 1</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Lago</p>
+          </div>
         </a>
 
+        <!-- Imagem 2 -->
         <a
           href="#img2"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/cisne.jpeg"
-            alt="Imagem 2"
-            class="w-full h-full object-cover"
+            alt="Cisne no Lago"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 2</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Cisne</p>
+          </div>
         </a>
 
+        <!-- Imagem 3 -->
         <a
           href="#img3"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/sol.jpeg"
-            alt="Imagem 3"
-            class="w-full h-full object-cover"
+            alt="Pôr do Sol"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 3</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Pôr do sol</p>
+          </div>
         </a>
 
+        <!-- Imagem 4 -->
         <a
           href="#img4"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/bridge.jpeg"
-            alt="Imagem 4"
-            class="w-full h-full object-cover"
+            alt="Ponte"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 4</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Tower Bridge</p>
+          </div>
         </a>
 
+        <!-- Imagem 5 -->
         <a
           href="#img5"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/one world.jpeg"
-            alt="Imagem 5"
-            class="w-full h-full object-cover"
+            alt="One World"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 5</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">One World Trade Center</p>
+          </div>
         </a>
 
+        <!-- Imagem 6 -->
         <a
           href="#img6"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/oxford.jpeg"
-            alt="Imagem 6"
-            class="w-full h-full object-cover"
+            alt="Oxford"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 6</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Oxford</p>
+          </div>
         </a>
 
+        <!-- Imagem 7 -->
         <a
           href="#img7"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/praia.JPG"
-            alt="Imagem 7"
-            class="w-full h-full object-cover"
+            alt="Praia"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 7</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Praia</p>
+          </div>
         </a>
 
+        <!-- Imagem 8 -->
         <a
           href="#img8"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/italian.jpeg"
-            alt="Imagem 8"
-            class="w-full h-full object-cover"
+            alt="Italian"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 8</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Montanhas e rio</p>
+          </div>
         </a>
 
+        <!-- Imagem 9 -->
         <a
           href="#img9"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/carros.JPG"
-            alt="Imagem 9"
-            class="w-full h-full object-cover"
+            alt="Carros"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 9</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Quotidiano</p>
+          </div>
         </a>
 
+        <!-- Imagem 10 -->
         <a
           href="#img10"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/basket.JPG"
-            alt="Imagem 10"
-            class="w-full h-full object-cover"
+            alt="Basket"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 10</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Basket no pôr do sol</p>
+          </div>
         </a>
 
+        <!-- Imagem 11 -->
         <a
           href="#img11"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/bilhar.jpeg"
-            alt="Imagem 11"
-            class="w-full h-full object-cover"
+            alt="Bilhar"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 11</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Bilhar</p>
+          </div>
         </a>
 
+        <!-- Imagem 12 -->
         <a
           href="#img12"
-          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition"
+          class="gallery-item block overflow-hidden rounded-lg shadow hover:opacity-90 transition bg-white"
         >
           <img
             src="img/quadro.jpeg"
-            alt="Imagem 12"
-            class="w-full h-full object-cover"
+            alt="Quadro"
+            class="w-full h-64 object-cover"
           />
-          <div class="caption text-center py-2 bg-white">Imagem 12</div>
+          <div class="caption text-center py-3 px-2">
+            <p class="text-sm text-gray-600">Quadro de Piet Mondrian</p>
+          </div>
         </a>
       </div>
     </main>
@@ -205,16 +271,30 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-100 text-center py-8 mt-10">
       <h2 class="text-xl font-semibold mb-2">Contactos</h2>
-      <p class="mb-1">📧 Email: <a href="mailto:diana.silva@email.com" class="underline hover:text-gray-300">diana.silva@email.com</a></p>
-      <p class="mb-1">📞 Telefone: <a href="tel:+351912345678" class="underline hover:text-gray-300">+351 912 345 678</a></p>
-      <div class="flex justify-center gap-6 mt-4">
-        <a href="https://www.instagram.com" target="_blank" class="hover:text-gray-400">Instagram</a>
-        <a href="https://www.facebook.com" target="_blank" class="hover:text-gray-400">Facebook</a>
-        <a href="https://www.linkedin.com" target="_blank" class="hover:text-gray-400">LinkedIn</a>
-      </div>
-      <p class="text-sm text-gray-400 mt-6">© 2025 Diana Silva — Todos os direitos reservados</p>
+      <p class="mb-1">
+        📧 Email:
+        <a
+          href="mailto:diana.silva.pt.12@gmail.com"
+          class="underline hover:text-gray-300"
+          >diana.silva.pt.12@gmail.com</a
+        >
+      </p>
+      <p class="mb-1">
+        📞 Telefone:
+        <a href="tel:+351932448201" class="underline hover:text-gray-300"
+          >+351 932 448 201</a
+        >
+      </p>
+      <p class="mb-1">
+        📷 Instagram:
+        <a
+          href="https://www.instagram.com/diana.silv7/?next=%2F"
+          target="_blank"
+          class="underline hover:text-gray-300"
+          >@diana.silv7</a
+        >
+      </p>
+      <p class="text-sm text-gray-400 mt-6">2025 - Diana Silva</p>
     </footer>
-  </body>
-</html>
   </body>
 </html>
