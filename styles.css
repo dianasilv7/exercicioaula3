@@ -54,7 +54,7 @@
   }
 }
 
-/* Gallery Items com animação escalonada */
+/* Gallery Items com animação */
 .gallery-item {
   animation: slideUp 0.6s ease-out forwards;
 }
